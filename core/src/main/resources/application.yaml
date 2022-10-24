@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/liga
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    initialization-mode: always
+    continue-on-error: true
+    hikari:
+        maximum-pool-size: 10
+    schema: classpath:init/schema.sql
+    data: classpath:init/data.sql
+  sql:
+    init:
+      mode: always
+      data-locations: classpath:init/schema.sql
