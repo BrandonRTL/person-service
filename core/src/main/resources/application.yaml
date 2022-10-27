@@ -1,6 +1,5 @@
 server:
   port: 8080
-
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/liga
@@ -11,9 +10,11 @@ spring:
     continue-on-error: true
     hikari:
         maximum-pool-size: 10
-    schema: classpath:init/schema.sql
-    data: classpath:init/data.sql
-  sql:
-    init:
-      mode: always
-      data-locations: classpath:init/schema.sql
+  #  schema: classpath:init/schema.sql
+ #   data: classpath:init/data.sql
+  liquibase:
+    change-log: classpath:/db/changelog.xml
+    enabled: true
+mybatis:
+  configuration:
+    mapUnderscoreToCamelCase : true

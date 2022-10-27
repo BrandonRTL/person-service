@@ -1,12 +1,14 @@
 package liga.medical.personservice.core.model;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import org.springframework.data.annotation.Id;
 
 import java.sql.Date;
 
 @Data
+@NoArgsConstructor
 public class PersonData {
 
     @Id
@@ -20,7 +22,7 @@ public class PersonData {
     private String firstName;
 
     @NonNull
-    private Date birthDt;
+    private Date birthDate;
 
     private long age;
 

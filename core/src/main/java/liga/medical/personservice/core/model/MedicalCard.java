@@ -1,12 +1,14 @@
 package liga.medical.personservice.core.model;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import org.springframework.data.annotation.Id;
 
 import java.sql.Date;
 
 @Data
+@NoArgsConstructor
 public class MedicalCard {
 
     @Id
